@@ -2,10 +2,17 @@
   "name": "electron-sample",
   "version": "0.0.0",
   "description": "electron sample",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:ls && npm run build:jade",
+    "build:ls": "lsc -cbo build src",
+    "build:jade": "jade src --out build"
   },
   "author": "jigsaw (http://jgs.me)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "LiveScript": "^1.3.1",
+    "jade": "^1.9.2"
+  }
 }
